@@ -53,6 +53,10 @@ This shows tree nodes alongside a standard table of geologic time scale (GTS). W
 
 ![Geological timeline](https://github.com/OpenTreeOfLife/tree-illustrator/blob/master/wishlist-images/MPN_example.png "GTS example")
 
+## Stacked colored lines (left figure) indicating aggregated states changing along branches
+
+![stacked lines](Rhododendron-supfig.png "stacked lines")
+
 ## Simple cases
 
 At a minimum, we need to support the simplest cases that are in papers: i.e., colored labels, branch widths, clade designations.
@@ -62,6 +66,56 @@ At a minimum, we need to support the simplest cases that are in papers: i.e., co
 It is also possible that one might want to indicate a group of terminal taxa that don't completely correspond to clade, e.g. geography.
 
 ![Non-clade grouping](https://github.com/daisieh/phylostylotastic/blob/master/analysis/lupinus.png "Non-clade grouping")
+
+### Branch labels, markers, and labeled markers
+
+![simple case](lupinus-legcyc.jpg "branch labels and markers")
+
+### Vertical labels, branch length calibration rulers, node images and silhouttes
+
+http://www.nature.com/nature/journal/v526/n7574/fig_tab/nature15697_F1.html
+![image](https://cloud.githubusercontent.com/assets/163658/19475951/e9c39a86-9536-11e6-953f-31334364b5f5.png)
+![image](https://cloud.githubusercontent.com/assets/163658/19475961/f4424d72-9536-11e6-8659-eba629d201e3.png)
+
+### Silhouettes, node background, more branch length rulers, notes on nodes
+
+http://www.nature.com/articles/srep20252/figures/2
+![image](https://cloud.githubusercontent.com/assets/163658/19475927/cf37cda4-9536-11e6-9343-6788a25f3ab6.png)
+
+### backgrounds, vertical label bands
+
+http://www.sciencedirect.com/science/article/pii/S1055790313000298#f0005
+![image](https://cloud.githubusercontent.com/assets/163658/19475915/c3dc6668-9536-11e6-97fd-d27f59ac7251.png)
+
+### collapsed nodes, aligned data matrices 
+http://www.nature.com/nature/journal/v504/n7479/fig_tab/nature12779_F2.html
+![image](https://cloud.githubusercontent.com/assets/163658/19475884/a16d54ac-9536-11e6-868d-94a2e0dd882e.png)
+
+### large trees summarized (e.g. metagenomics), circular tree representation, Bars in terminal nodes
+
+http://www.nytimes.com/interactive/2012/06/19/science/0619-microbiome.html?ref=science&_r=0 
+![image](https://cloud.githubusercontent.com/assets/163658/19475876/94d30e94-9536-11e6-91b3-2fb0653d7594.png)
+
+## Notes Oct 18
+
+(Please edit freely -- this is not my forte!)
+
+* BAMM colormap tree tricky - in terms of storage - values are assigned to branch segments
+* recruit R expert?
+* artifact of squishing short branches + outline of path
+* need reference marks, not every kind of visual shape, geological timescale, etc
+* don't need to replicate fancy R addons with built-in design decisions
+* main thing is to represent data -- use skeleton indicators that can be enhanced e.g. in Illustrator
+* out of scope to support arbitrary positioning to manage crowding
+* levels of abstraction - data values and style/presentation
+* need to accomodate accessibility -- choosing alternative styles
+* need to define what graphical features to serialize
+* want to serialize data ("bootstrap value"), but this is difficult for tree viewers to handle
+* separate data values and graphical renderings
+* use nexson for data serialization?
+* Stamatakis paper - problem of rooting in tree viewers - e.g. can lead to incorrect placement of bootstrap values
+* serialization - nested vs non-nested representation of trees?
+* newick is inadequate
 
 ## scrap and notes
 
